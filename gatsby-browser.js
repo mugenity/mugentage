@@ -1,9 +1,9 @@
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+// import React from "react"
+// import { AnimatePresence } from "framer-motion"
 
-// normalize CSS across browsers
-import "./src/css/normalize.css"
+// export const wrapPageElement = ({ element }) => (
+//   <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
+// )
 
-// custom CSS styles
-import "./src/css/style.css"
+// must be on Gatsby v2.28 or later -- previous versions had a bug with getSavedScrollPosition that was resolved with v2.28
+// wait until page exit animation has completed before updating scroll position

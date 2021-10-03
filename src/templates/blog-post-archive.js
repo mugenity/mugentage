@@ -2,9 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import parse from "html-react-parser"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../Layout/"
+import Seo from "../components/SEO"
 
 const BlogIndex = ({
   data,
@@ -14,9 +13,9 @@ const BlogIndex = ({
 
   if (!posts.length) {
     return (
-      <Layout isHomePage>
+      <Layout>
         <Seo title="All posts" />
-        <Bio />
+
         <p>
           No blog posts found. Add posts to your WordPress site and they'll
           appear here!
@@ -26,12 +25,10 @@ const BlogIndex = ({
   }
 
   return (
-    <Layout isHomePage>
+    <Layout>
       <Seo title="All posts" />
 
-      <Bio />
-
-      <ol style={{ listStyle: `none` }}>
+      <ol>
         {posts.map(post => {
           const title = post.title
 
