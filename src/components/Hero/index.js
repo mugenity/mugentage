@@ -1,6 +1,6 @@
 import React from "react"
 import { Container } from "./styles"
-// import Snowfall from "react-snowfall"
+import Snowfall from "react-snowfall"
 import { motion } from "framer-motion"
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <Container>
-      {/* <Snowfall snowflakeCount={12} color="white" /> */}
+      <Snowfall snowflakeCount={12} color="white" />
       <motion.div className="content">
         <div className="title">
           <motion.h2 variants={sentence} initial="hidden" animate="visible">
