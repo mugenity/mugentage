@@ -4,7 +4,7 @@ import searchIcon from "../../Images/search.svg"
 import { navigate } from "gatsby-link"
 
 const SearchBar = ({ articles }) => {
-  const [userQuery, setUserQuery] = useState("")
+  const [userQuery, setUserQuery] = useState(null)
 
   const handleSubmit = evt => {
     evt.preventDefault()
