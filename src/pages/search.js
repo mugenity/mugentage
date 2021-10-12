@@ -7,7 +7,7 @@ import parse from "html-react-parser"
 import RecentPost from "../components/RecentPost"
 
 const SearchPage = ({ location }) => {
-  const { userQuery, searchQuery } = location.state
+  const { userQuery, searchQuery } = location?.state
 
   const [searchData, setSearchData] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
