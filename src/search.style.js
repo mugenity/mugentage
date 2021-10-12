@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { device } from "../globalStyle"
+import { device } from "./globalStyle"
 
 export const SearchBox = styled.div`
   background-color: #1a1007e6;

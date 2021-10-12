@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../Layout"
-import { SearchBox, StyledImage } from "./styles"
+import { SearchBox, StyledImage } from "../search.style"
 import { Link } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
