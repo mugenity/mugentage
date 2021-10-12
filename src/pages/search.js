@@ -89,7 +89,7 @@ const SearchPage = ({ location }) => {
   const renderSearch = data => {
     return (
       <div className="filtered_articles">
-        {data?.length > 0 ? (
+        {userQuery || !userQuery ? (
           data.map(article => {
             const { title, id, uri, excerpt, featuredImage } = article
             const thumbnail = getImage(featuredImage?.node?.localFile)
