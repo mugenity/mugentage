@@ -23,18 +23,18 @@ const item = {
   },
 }
 
-const OverlayMenu = ({ open }) => {
+const OverlayMenu = ({ open, handler }) => {
   return (
     <Container open={open}>
       <nav>
         <motion.ul variants={container} initial="hidden" animate="visible">
-          <motion.li variants={open && item}>
+          <motion.li variants={open && item} onClick={handler}>
             <Link to="/">Home</Link>
           </motion.li>
-          <motion.li variants={open && item}>
+          <motion.li variants={open && item} onClick={handler}>
             <Link to="/">Posts</Link>
           </motion.li>
-          <motion.li variants={open && item}>
+          <motion.li variants={open && item} onClick={handler}>
             <Link to="/">About</Link>
           </motion.li>
         </motion.ul>

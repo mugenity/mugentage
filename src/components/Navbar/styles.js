@@ -99,6 +99,10 @@ export const Container = styled.div`
       font-family: limelight;
       margin-right: 30px;
 
+      @media ${device.tablet} {
+        display: none;
+      }
+
       a {
         margin-right: 20px;
         color: white;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import useArticleQuery from "../hooks/useArticlesQuery"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <OverlayMenu open={open} />
+      <OverlayMenu open={open} handler={handleOverlayMenu} />
 
       <header>
         <Navbar handler={handleOverlayMenu} articles={allWpPost} open={open} />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../Layout"
-import { Container, StyledImage } from "./search.styles"
+import { SearchBox, StyledImage } from "./styles"
 import { Link } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
@@ -46,11 +46,19 @@ const SearchPage = ({ location }) => {
 
   let pageIncrementBtn = null
   if (pages.length > maxPageNumberLimit) {
-    pageIncrementBtn = <li onClick={handleNext}> &hellip; </li>
+    pageIncrementBtn = (
+      <li onClick={handleNext} onKeyDown={handleNext}>
+        &hellip;
+      </li>
+    )
   }
   let pageDecrementBtn = null
   if (minPageNumberLimit >= 1) {
-    pageDecrementBtn = <li onClick={handlePrevious}> &hellip; </li>
+    pageDecrementBtn = (
+      <li onClick={handlePrevious} onKeyDown={handlePrevious}>
+        &hellip;
+      </li>
+    )
   }
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
@@ -63,6 +71,7 @@ const SearchPage = ({ location }) => {
           key={index}
           id={number}
           onClick={handleClick}
+          onKeyDown={handleClick}
           className={`${number === currentPage && "active_page"}`}
         >
           {number}
@@ -75,7 +84,7 @@ const SearchPage = ({ location }) => {
 
   useEffect(() => {
     setSearchData(searchQuery)
-  }, [])
+  }, [searchQuery])
 
   const renderSearch = data => {
     return (
@@ -94,7 +103,7 @@ const SearchPage = ({ location }) => {
                 </div>
                 <div className="info">
                   <Link to={`/blog${uri}`}>{title}</Link>
-                  <p> {parse(excerpt)}</p>
+                  <div className="excerpt"> {parse(excerpt)}</div>
                 </div>
               </div>
             )
@@ -108,7 +117,7 @@ const SearchPage = ({ location }) => {
 
   return (
     <Layout>
-      <Container>
+      <SearchBox>
         <div className="title">
           <h1>
             Search results for : <span>{userQuery}</span>
@@ -140,7 +149,7 @@ const SearchPage = ({ location }) => {
             </button>
           </li>
         </ul>
-      </Container>
+      </SearchBox>
     </Layout>
   )
 }

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { device } from "../globalStyle"
 
-export const Container = styled.div`
+export const SearchBox = styled.div`
   background-color: #1a1007e6;
   padding-top: 100px;
 
@@ -49,7 +49,7 @@ export const Container = styled.div`
           text-decoration: underline;
           font-size: 1.6rem;
         }
-        p {
+        .excerpt {
           color: white;
           margin-top: 20px;
           font-size: 0.8rem;

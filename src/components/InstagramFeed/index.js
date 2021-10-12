@@ -54,9 +54,6 @@ const InstagramFeed = () => {
 
   return (
     <Container>
-      {/* <div className="title">
-        <h3>- Instagram Feed -</h3>
-      </div> */}
       <div className="instagram_feed_box">
         <Slider ref={sliderRef} {...sliderSettings}>
           {allInstagramContent.nodes.map(iPost => {

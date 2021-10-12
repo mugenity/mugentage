@@ -5,7 +5,6 @@ const SubscriptionForm = ({ customBorder, customWidth }) => {
   const [status, setStatus] = useState(null)
   const [email, setEmail] = useState("")
 
-  //FORM_URL should be the same as the form action url pointed out above
   const FORM_URL = `https://app.convertkit.com/forms/2633825/subscriptions`
 
   const handleSubmit = async e => {
@@ -45,7 +44,6 @@ const SubscriptionForm = ({ customBorder, customWidth }) => {
         <input
           type="email"
           aria-label="Your email"
-          //The name attribute should be the same as on you selected form.
           name="mugenmugi33@gmail.com"
           placeholder="Your email address"
           onChange={handleInputChange}

@@ -39,7 +39,11 @@ const RecentPost = () => {
       <div className="categories_box">
         <h3>Categories</h3>
         {allWpCategory.nodes.map(cat => {
-          return <Link to={`/category/${cat.slug}`}> #{cat.name}</Link>
+          return (
+            <Link key={cat.id} to={`/category/${cat.slug}`}>
+              #{cat.name}
+            </Link>
+          )
         })}
       </div>
     </RightContainer>

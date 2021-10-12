@@ -8,9 +8,6 @@ const Footer = () => {
       <div className="footer_content">
         <div className="box1">
           <span className="logo">MugenTage.</span>
-          {/* <div className="newsletter">
-            <input type="text" placeholder="Email Address" />
-          </div> */}
           <SubscriptionForm customBorder customWidth />
         </div>
         <div className="box2">
