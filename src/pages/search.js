@@ -7,7 +7,7 @@ import parse from "html-react-parser"
 import RecentPost from "../components/RecentPost"
 
 const SearchPage = ({ location }) => {
-  const { userQuery, searchQuery } = location.state
+  const { searchQuery } = location.state
 
   const [searchData, setSearchData] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
@@ -89,7 +89,7 @@ const SearchPage = ({ location }) => {
   const renderSearch = data => {
     return (
       <div className="filtered_articles">
-        {userQuery || !userQuery ? (
+        {location.userQuery || !location.userQuery ? (
           data.map(article => {
             const { title, id, uri, excerpt, featuredImage } = article
             const thumbnail = getImage(featuredImage?.node?.localFile)
@@ -120,7 +120,7 @@ const SearchPage = ({ location }) => {
       <SearchBox>
         <div className="title">
           <h1>
-            Search results for : <span>{userQuery}</span>
+            Search results for : <span>{location.state.userQuery}</span>
           </h1>
         </div>
         <div className="content_container">
