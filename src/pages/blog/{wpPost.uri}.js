@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { Wrapper, TitleImg, CommentBox } from "./styles"
+import { Wrapper, TitleImg, CommentBox } from "../../post.styles"
 import Seo from "../../components/SEO"
 import Layout from "../../Layout"
 import parse from "html-react-parser"

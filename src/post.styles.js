@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { device } from "../../globalStyle"
+import { device } from "./globalStyle"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.div`
