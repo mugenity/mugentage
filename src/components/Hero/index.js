@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <Container>
-      <Snowfall snowflakeCount={12} color="white" />
+      <Snowfall color="white" />
       <motion.div className="content">
         <div className="title">
           <motion.h2 variants={sentence} initial="hidden" animate="visible">
