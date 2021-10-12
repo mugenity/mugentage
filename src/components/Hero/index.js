@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Container } from "./styles"
 import Snowfall from "react-snowfall"
 import { motion } from "framer-motion"
 
 const Hero = () => {
-  const [snow, setSnow] = useState(false)
-
-  useEffect(() => {
-    setSnow(true)
-  }, [snow])
-
   const text = "The Secret of Art & Soul !"
 
   const sentence = {
@@ -33,7 +27,7 @@ const Hero = () => {
 
   return (
     <Container>
-      {snow && <Snowfall color="white" snowflakeCount={12} />}
+      <Snowfall color="white" snowflakeCount={12} />
       <motion.div className="content">
         <div className="title">
           <motion.h2 variants={sentence} initial="hidden" animate="visible">
