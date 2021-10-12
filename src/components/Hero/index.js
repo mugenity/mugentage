@@ -27,7 +27,9 @@ const Hero = () => {
 
   return (
     <Container>
-      {window !== undefined && <Snowfall color="white" snowflakeCount={12} />}
+      {window !== undefined ? (
+        <Snowfall color="white" snowflakeCount={12} />
+      ) : null}
 
       <motion.div className="content">
         <div className="title">
