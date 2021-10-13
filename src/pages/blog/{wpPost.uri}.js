@@ -14,7 +14,7 @@ const ArticleTemp = ({ data: { wpPost } }) => {
   const image = getImage(featuredImage.node.localFile)
 
   const disqusConfig = {
-    shortname: process.env.REACT_APP_DISQUS_ID,
+    shortname: mugentage,
     config: { identifier: title },
   }
 
