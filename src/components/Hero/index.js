@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Container } from "./styles"
 import Snowfall from "react-snowfall"
 import { motion } from "framer-motion"
+import { isBrowser } from "../../utils.js"
 
 const Hero = () => {
-  const [snow, setSnow] = useState(false)
   const text = "The Secret of Art & Soul !"
 
   const sentence = {
@@ -26,15 +26,9 @@ const Hero = () => {
     },
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      setSnow(true)
-    }, 1000)
-  }, [])
-
   return (
     <Container>
-      {snow && <Snowfall color="white" snowflakeCount={12} />}
+      {isBrowser && <Snowfall color="white" snowflakeCount={12} />}
 
       <motion.div className="content">
         <div className="title">
