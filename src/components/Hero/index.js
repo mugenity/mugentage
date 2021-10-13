@@ -28,7 +28,8 @@ const Hero = () => {
 
   return (
     <Container>
-      {isBrowser && <Snowfall color="white" snowflakeCount={12} />}
+      {isBrowser ||
+        (!isBrowser && <Snowfall color="white" snowflakeCount={12} />)}
 
       <motion.div className="content">
         <div className="title">
