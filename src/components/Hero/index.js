@@ -2,6 +2,7 @@ import React from "react"
 import { Container } from "./styles"
 import Snowfall from "react-snowfall"
 import { motion } from "framer-motion"
+import { isBrowser } from "../../utils.js"
 
 const Hero = () => {
   const text = "The Secret of Art & Soul !"
@@ -27,9 +28,7 @@ const Hero = () => {
 
   return (
     <Container>
-      {typeof window !== undefined && (
-        <Snowfall color="white" snowflakeCount={12} />
-      )}
+      {!isBrowser ? null : <Snowfall color="white" snowflakeCount={12} />}
 
       <motion.div className="content">
         <div className="title">
