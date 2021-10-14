@@ -27,8 +27,8 @@ const Hero = () => {
 
   return (
     <Container>
-      {/* <Snowfall color="white" snowflakeCount={12} /> */}
       <Particles
+        className="bubbles"
         params={{
           particles: {
             number: {
