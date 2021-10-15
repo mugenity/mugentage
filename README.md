@@ -1,4 +1,4 @@
-# -- MugenTage powered with Gatsby/Wordpress -- Blog about Art & Fashion and everything related.
+# -- MugenTage Blog powered with Gatsby/Wordpress --
 
 ## Dependencies used:
 
